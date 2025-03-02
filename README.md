@@ -1,116 +1,64 @@
-In this project, let's build a **Coin Toss Game** by applying the concepts we have learned till now.
+# Coin Toss Game
 
-### Refer to the image below:
+## About This Project
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/coin-toss-game-output.gif" alt="coin toss game output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+I built this **Coin Toss Game** using React, where users can toss a virtual coin and track the number of heads and tails. The game randomly generates the toss result and updates the count accordingly.
 
-### Design Files
+### Features
 
-<details>
-<summary>Click to view</summary>
+- Displays an initial screen with a heads image and count values set to **0**.
+- Clicking the **Toss Coin** button generates a random toss result.
+- The result updates the displayed image and increments the respective counters.
+- Tracks the total number of tosses along with separate counts for heads and tails.
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/coin-toss-game-sm-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/coin-toss-game-lg-output.png)
+## How I Built It
 
-</details>
+This project was built using **React.js** with component-based development. The key implementation details include:
 
-### Set Up Instructions
-
-<details>
-<summary>Click to view</summary>
-
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
-
-### Completion Instructions
-
-<details>
-<summary>Functionality to be added</summary>
-<br/>
-
-The app must have the following functionalities
-
-- Initially, the app should have heads image and total, heads, tails counts as **0**
-- When the **Toss Coin** button is clicked, then the toss result should be generated using the below expression
-
+- Used **React State** to manage the count of heads, tails, and total tosses.
+- Generated toss results using:
+  ```js
+  const tossResult = Math.floor(Math.random() * 2);
   ```
-  const tossResult = Math.floor(Math.random() * 2)
-  ```
+- Updated the UI dynamically based on state changes.
+- Styled the components using **CSS**.
 
-- If the number generated from the given expression is `0` then the result should be `heads` or else the result should be `tails`
-- When the **Toss Coin** is clicked, and the result is `heads` then
-  - The heads image should be displayed
-  - The heads count should be incremented by one
-  - The total should be incremented by one
-- When the **Toss Coin** is clicked, and the result is `tails` then
-  - The tails image should be displayed
-  - The tails count should be incremented by one
-  - The total should be incremented by one
+## How to Use This Repository
 
-</details>
+### Installation and Setup
 
-<details>
-<summary>Implementation Files</summary>
-<br/>
+To run this project locally, follow these steps:
 
-Use these files to complete the implementation:
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/sureshnenavath/Coin-Toss-Game-React-cp14.git
+   ```
+2. Navigate into the project directory:
+   ```sh
+   cd coin-toss-game
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+5. Open your browser and go to `http://localhost:3000/` to play the game.
 
-- `src/components/CoinToss/index.js`
-- `src/components/CoinToss/index.css`
-</details>
+## Project Structure
 
-### Important Note
+The main files involved in this project are:
 
-<details>
-<summary>Click to view</summary>
+- `src/components/CoinToss/index.js` - Main component logic.
+- `src/components/CoinToss/index.css` - Styling for the game.
 
-<br/>
+## Resources Used
 
-**The following instructions are required for the tests to pass**
+- **React.js** for UI development.
+- **CSS** for styling.
+- **Math.random()** for generating random toss results.
 
-- The toss result image should have the alt attribute value as **toss result**
+Feel free to fork, modify, and contribute to this project. Happy coding! 🚀
 
-</details>
-
-### Resources
-
-<details>
-<summary>Image URLs</summary>
-
-- [https://assets.ccbp.in/frontend/react-js/heads-img.png](https://assets.ccbp.in/frontend/react-js/heads-img.png)
-- [https://assets.ccbp.in/frontend/react-js/tails-img.png](https://assets.ccbp.in/frontend/react-js/tails-img.png)
-
-</details>
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #e2a139; width: 150px; padding: 10px; color: white">Hex: #e2a139</div>
-<div style="background-color: #f9d423; width: 150px; padding: 10px; color: black">Hex: #f9d423</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #a35200; width: 150px; padding: 10px; color: white">Hex: #a35200</div>
-<div style="background-color: #334155; width: 150px; padding: 10px; color: white">Hex: #334155</div>
-<div style="background-color: #475569; width: 150px; padding: 10px; color: white">Hex: #475569</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
